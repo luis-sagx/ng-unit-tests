@@ -18,6 +18,7 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, pruebas-unitarias');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Pruebas');
+    expect(compiled.querySelector('h3')?.textContent).toContain('Usando Jasmin');
   });
 });

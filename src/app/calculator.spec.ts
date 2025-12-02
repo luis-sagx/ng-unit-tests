@@ -8,6 +8,7 @@ beforeEach(() => {
 });
 
 describe('Calculator', () => {
+  // fdescribe('Test for multiply method', () => {  ==> poniendo una f al principio solo se ejecuta este bloque
   describe('Test for multiply method', () => {
     it('should return twelve when multiplying 4 and 3', () => {
       // Arrange
@@ -22,6 +23,7 @@ describe('Calculator', () => {
   });
 
   describe('Test for divide method', () => {
+    // fit('divide for a number', () => {  ==> poniendo una f al principio solo se ejecuta este test
     it('divide for a number', () => {
       //act
       let result1 = calculator.divide(15, 5);
