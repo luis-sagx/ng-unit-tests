@@ -1,10 +1,16 @@
 import { Calculator } from './calculator';
 
+let calculator: any;
+
+// arange
+beforeEach(() => {
+  calculator = new Calculator();
+});
+
 describe('Calculator', () => {
   describe('Test for multiply method', () => {
     it('should return twelve when multiplying 4 and 3', () => {
       // Arrange
-      let calculator = new Calculator();
       let num1 = 4;
       let num2 = 3;
       let expected = 12;
@@ -17,17 +23,55 @@ describe('Calculator', () => {
 
   describe('Test for divide method', () => {
     it('divide for a number', () => {
-      let calculator = new Calculator();
+      //act
       let result1 = calculator.divide(15, 5);
       let result2 = calculator.divide(20, 4);
+      //assert
       expect(result2).toEqual(5);
       expect(result1).toEqual(3);
     });
 
-    it('should return null when dividing by 0', () => {
-      let calculator = new Calculator();
-      let result = calculator.divide(10, 0);
-      expect(result).toBeNull();
+    it('divide for a zero', () => {
+      // act y assert
+      expect(calculator.divide(10, 0)).toBeNull();
+      expect(calculator.divide(12340, 0)).toBeNull();
+      expect(calculator.divide(-234, 0)).toBeNull();
+    });
+  });
+
+  describe('Test Matchers', () => {
+    it('test different matchers', () => {
+      let name = 'Luis';
+      let name2;
+
+      expect(name).toBeDefined();
+      expect(name2).toBeUndefined();
+
+      expect(1 + 1 === 2).toBeTruthy();
+      expect(1 + 1 === 3).toBeFalsy();
+
+      expect(10).toBeGreaterThan(5);
+      expect(5).toBeLessThan(10);
+
+      expect('Evalua cadenas de texto').toMatch(/adena/);
+      expect('Evalua cadenas de texto').not.toMatch(/noooo/);
+
+      let fruits = ['apple', 'banana', 'orange', 'kiwi'];
+      expect(fruits).toContain('banana');
+      expect(fruits).not.toContain('grape');
     });
   });
 });
+
+// tipos de matchers
+// toEqual => compara valores
+// toBe => compara referencias
+// toBeNull => comprueba si es null
+// toBeUndefined => comprueba si es undefined
+// toBeDefined => comprueba si no es undefined
+// toBeTrue => comprueba si es true
+// toBeFalse => comprueba si es false
+// toBeGreaterThan => mayor que
+// toBeLessThan => menor que
+// toContain => comprueba si un array contiene un elemento
+// toThrow => comprueba si una funcion lanza un error
