@@ -1,31 +1,42 @@
 <div class="container">
-  <h1>Pruebas</h1>
-  <h3>Usando Jasmin</h3>
+  <header class="header">
+    <h1>Pruebas Unitarias</h1>
+    <p class="subtitle">Colección de los mejores equipos</p>
+  </header>
 
-  <div class="section">
-    <input type="text" [(ngModel)]="nombre" placeholder="Ingresa tu nombre" />
-    <p>{{ saludo }}</p>
-  </div>
+  <main>
+    <section class="gallery-section">
+      <div class="teams-gallery">
+        <div class="team-card">
+          <img src="arsenal.png" alt="Arsenal" />
+          <span class="team-name">Arsenal</span>
+        </div>
+        <div class="team-card">
+          <img src="chelsea.png" alt="Chelsea" />
+          <span class="team-name">Chelsea</span>
+        </div>
+        <div class="team-card">
+          <img src="liga.png" alt="Liga de Quito" />
+          <span class="team-name">Liga de Quito</span>
+        </div>
+        <div class="team-card">
+          <img src="psg.png" alt="PSG" />
+          <span class="team-name">PSG</span>
+        </div>
+      </div>
+    </section>
 
-  <div class="section">
-    <h2>Contador: {{ contador }}</h2>
-    <button (click)="incrementar()">Incrementar</button>
-    <button (click)="decrementar()">Decrementar</button>
-    <button (click)="resetear()">Resetear</button>
-  </div>
-  <div class="section">
-    <button (click)="cambiarColor()">Cambiar Color</button>
-    <div class="color-box" [style.background-color]="colorActual"></div>
-  </div>
+    <section class="info-section">
+      <h2>Recursos de Testing</h2>
+      <ul class="resources-list">
+        <li><a href="https://jasmine.github.io/" target="_blank">Jasmine</a></li>
+        <li><a href="https://karma-runner.github.io/" target="_blank">Karma</a></li>
+        <li><a href="https://angular.dev/" target="_blank">Angular</a></li>
+      </ul>
+    </section>
+  </main>
 
-  <div class="section">
-    <h2>Equipos de Fútbol</h2>
-    <div class="teams-gallery">
-      <img src="arsenal.png" alt="Arsenal" title="Arsenal" />
-      <img src="chelsea.png" alt="Chelsea" title="Chelsea" />
-      <img src="liga.png" alt="Liga de Quito" title="Liga de Quito" />
-      <img src="psg.png" alt="PSG" title="PSG" />
-      <img src="real-madrid.png" alt="Real Madrid" title="Real Madrid" />
-    </div>
-  </div>
+  <footer class="footer">
+    <p>© 2025 - Luis Sagnay</p>
+  </footer>
 </div>
