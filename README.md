@@ -4,6 +4,7 @@ Proyecto de pruebas unitarias exhaustivas implementando una amplia variedad de *
 
 ## 📊 Resumen del Proyecto
 
+- **Total de Pruebas:** 51 pruebas unitarias (optimizadas)
 - **Cobertura de Código:** 100%
 - **Framework de Testing:** Jasmine + Karma
 - **Componentes Testeados:** App, Header, Footer
@@ -54,7 +55,7 @@ Este proyecto demuestra el uso de múltiples matchers de Jasmine para realizar p
 
 ## 📁 Estructura de Pruebas
 
-### App Component
+### App Component (29 pruebas)
 
 ```typescript
 src / app / app.spec.ts;
@@ -71,7 +72,7 @@ src / app / app.spec.ts;
 - ✅ Validación de unicidad (sin duplicados)
 - ✅ Expresiones regulares para URLs
 
-### Header Component
+### Header Component (11 pruebas)
 
 ```typescript
 src / app / components / header / header.spec.ts;
@@ -80,6 +81,8 @@ src / app / components / header / header.spec.ts;
 **Cubre:**
 
 - ✅ Renderizado del elemento `<header>`
+  **Cubre:**
+- ✅ Renderizado del elemento `<header>`
 - ✅ Título principal `<h1>` con texto "Pruebas Unitarias"
 - ✅ Subtítulo con clase `.subtitle`
 - ✅ Estructura DOM (orden de elementos)
@@ -87,7 +90,7 @@ src / app / components / header / header.spec.ts;
 - ✅ Expresiones regulares para capitalización
 - ✅ Clases CSS y atributos
 
-### Footer Component
+### Footer Component (11 pruebas)
 
 ```typescript
 src / app / components / footer / footer.spec.ts;
