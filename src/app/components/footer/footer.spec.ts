@@ -39,8 +39,16 @@ describe('Footer Component - Pruebas con Matchers', () => {
     expect(footerElement?.tagName).toEqual('FOOTER');
   });
 
-  // Pruebas del copyright text con múltiples matchers
-  it('should render copyright paragraph with all matchers', () => {
+  it('should have exactly one footer element', () => {
+    const footers = compiled.querySelectorAll('footer');
+    expect(footers.length).toBe(1);
+    expect(footers.length).toEqual(1);
+    expect(footers.length).not.toBeGreaterThan(1);
+    expect(footers.length).toBeLessThanOrEqual(1);
+  });
+
+  // Pruebas del copyright text
+  it('should render copyright paragraph with correct text', () => {
     const paragraph = compiled.querySelector('footer p');
 
     expect(paragraph?.textContent).toBe('© 2025 - Luis Sagnay');
