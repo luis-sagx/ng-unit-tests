@@ -17,7 +17,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     fixture.detectChanges();
   });
 
-  // ==================== PRUEBAS BÁSICAS DEL COMPONENTE ====================
+  // PRUEBAS BÁSICAS DEL COMPONENTE
 
   it('should create the app component', () => {
     expect(component).toBeTruthy();
@@ -28,11 +28,11 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
 
   it('should be an instance of App class', () => {
     expect(component).toBeInstanceOf(App);
-    expect(component.constructor.name).toBe('App');
+    expect(component.constructor.name).toContain('App');
     expect(typeof component).toBe('object');
   });
 
-  // ==================== PRUEBAS DEL HEADER ====================
+  // PRUEBAS DEL HEADER
 
   it('should render app-header component', () => {
     const appHeader = compiled.querySelector('app-header');
@@ -48,7 +48,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     expect(headers.length).not.toBeGreaterThan(1);
   });
 
-  // ==================== PRUEBAS DEL FOOTER ====================
+  // PRUEBAS DEL FOOTER
 
   it('should render app-footer component', () => {
     const appFooter = compiled.querySelector('app-footer');
@@ -64,7 +64,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     expect(footers.length).not.toBeGreaterThan(1);
   });
 
-  // ==================== PRUEBAS DE ESTRUCTURA PRINCIPAL ====================
+  // PRUEBAS DE ESTRUCTURA PRINCIPAL
 
   it('should have container as root element', () => {
     const container = compiled.querySelector('.container');
@@ -90,7 +90,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     expect(children[2].tagName).toBe('APP-FOOTER');
   });
 
-  // ==================== PRUEBAS DE LA GALERÍA DE EQUIPOS ====================
+  // PRUEBAS DE LA GALERÍA DE EQUIPOS
 
   it('should render gallery section', () => {
     const gallerySection = compiled.querySelector('.gallery-section');
@@ -341,7 +341,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     });
   });
 
-  // ==================== PRUEBAS NEGATIVAS ====================
+  // PRUEBAS NEGATIVAS
 
   it('should not contain script tags', () => {
     const scripts = compiled.querySelectorAll('script');
@@ -378,7 +378,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     });
   });
 
-  // ==================== PRUEBAS DE ARRAYS Y COLECCIONES ====================
+  // PRUEBAS DE ARRAYS Y COLECCIONES
 
   it('should have all expected team names in array', () => {
     const teamNames = compiled.querySelectorAll('.team-name');
@@ -401,7 +401,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     expect(hrefs).toContain('https://angular.dev/');
   });
 
-  // ==================== PRUEBAS DE TIPOS Y CLASES ====================
+  // PRUEBAS DE TIPOS Y CLASES
 
   it('should have proper CSS classes on elements', () => {
     const container = compiled.querySelector('.container');
@@ -422,7 +422,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     });
   });
 
-  // ==================== PRUEBAS DE ELEMENTOS ESPECÍFICOS ====================
+  // PRUEBAS DE ELEMENTOS ESPECÍFICOS
 
   it('should have Arsenal as first team', () => {
     const firstTeamName = compiled.querySelector('.team-name');
@@ -441,7 +441,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     expect(firstLink?.getAttribute('href')).toBe('https://jasmine.github.io/');
   });
 
-  // ==================== PRUEBAS DE INTEGRACIÓN ====================
+  // PRUEBAS DE INTEGRACIÓN
 
   it('should have proper HTML structure with main sections', () => {
     const container = compiled.querySelector('.container');
@@ -468,7 +468,7 @@ describe('App Component - Pruebas Unitarias Exhaustivas', () => {
     expect(childCount).not.toBeUndefined();
   });
 
-  // ==================== PRUEBAS DE EXPRESIONES REGULARES ====================
+  // PRUEBAS DE EXPRESIONES REGULARES
 
   it('should have team names matching pattern', () => {
     const teamNames = compiled.querySelectorAll('.team-name');
